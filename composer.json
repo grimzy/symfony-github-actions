@@ -1,6 +1,8 @@
 {
+    "name": "grimzy/symfony-github-actions",
+    "description": "Example Symfony 5 <> Github Actions continuous integration",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
         "php": "^7.2.5",
         "ext-ctype": "*",
