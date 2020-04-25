@@ -26,8 +26,6 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, dom, filter, gd, iconv, json, mbstring, pdo
-        env:
-          update: true
 
       # Composer
       - name: Validate composer.json and composer.lock
