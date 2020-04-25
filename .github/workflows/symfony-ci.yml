@@ -6,8 +6,6 @@ on:
       - master
   pull_request:
 
-env:
-
 jobs:
   symfony:
     name: Symfony 5.0 (PHP ${{ matrix.php-versions }})
