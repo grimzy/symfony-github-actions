@@ -88,8 +88,15 @@
         "phpcs:fix": "phpcbf",
         "phpstan": "phpstan analyse",
         "phpmd": "phpmd src,tests text .phpmd-ruleset.xml",
-        "tests": "bin/phpunit",
-        "behat": "behat"
+        "phpunit": "bin/phpunit",
+        "behat": "behat",
+        "tests": [
+            "@phpunit",
+            "@tests:features"
+        ],
+        "tests:unit": "@phpunit --testsuite unit",
+        "tests:functional": "@phpunit --testsuite functional",
+        "tests:features": "@behat"
     },
     "conflict": {
         "symfony/symfony": "*"
