@@ -73,6 +73,6 @@ jobs:
           php bin/console about
 
       # Tests
-      - name: Run functionnal and unit tests
+      - name: Run unit and functional tests
         run: |
           php bin/phpunit --stop-on-failure
