@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\Behat;
 
 use Behat\Behat\Context\Context;
+use RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -29,6 +30,8 @@ final class DemoContext implements Context
     }
 
     /**
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     *
      * @When a demo scenario sends a request to :path
      */
     public function aDemoScenarioSendsARequestTo(string $path): void
@@ -42,7 +45,7 @@ final class DemoContext implements Context
     public function theResponseShouldBeReceived(): void
     {
         if ($this->response === null) {
-            throw new \RuntimeException('No response received');
+            throw new RuntimeException('No response received');
         }
     }
 
@@ -51,5 +54,8 @@ final class DemoContext implements Context
      */
     public function kernelEnvironmentShouldBe(string $expected): void
     {
+        if ($this->kernel->getEnvironment() !== $expected) {
+            throw new RuntimeException();
+        }
     }
 }
