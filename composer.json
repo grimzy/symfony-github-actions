@@ -33,6 +33,7 @@
     },
     "require-dev": {
         "behat/behat": "^3.6",
+        "behatch/contexts": "^3.3",
         "friends-of-behat/mink": "^1.8",
         "friends-of-behat/mink-browserkit-driver": "^1.4",
         "friends-of-behat/mink-extension": "^2.4",
