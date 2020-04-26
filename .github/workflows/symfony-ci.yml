@@ -60,9 +60,9 @@ jobs:
 
       # https://github.com/OskarStark/phpstan-ga (community)
       - name: PHPStan
-          uses: docker://oskarstark/phpstan-ga
-          with:
-            args: analyse src/
+        uses: docker://oskarstark/phpstan-ga
+        with:
+          args: analyse src/
 
       # Symfony
       - name: Check the Symfony console
