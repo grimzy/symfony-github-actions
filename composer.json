@@ -32,6 +32,11 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "behat/behat": "^3.6",
+        "friends-of-behat/mink": "^1.8",
+        "friends-of-behat/mink-browserkit-driver": "^1.4",
+        "friends-of-behat/mink-extension": "^2.4",
+        "friends-of-behat/symfony-extension": "^2.1",
         "phpmd/phpmd": "^2.8",
         "phpstan/phpstan": "^0.12.19",
         "phpstan/phpstan-symfony": "^0.12.6",
@@ -82,7 +87,8 @@
         "phpcs:fix": "phpcbf",
         "phpstan": "phpstan analyse",
         "phpmd": "phpmd src,tests text .phpmd-ruleset.xml",
-        "tests": "bin/phpunit"
+        "tests": "bin/phpunit",
+        "behat": "behat"
     },
     "conflict": {
         "symfony/symfony": "*"
