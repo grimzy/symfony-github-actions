@@ -32,6 +32,7 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "sensiolabs/security-checker": "^6.0",
         "squizlabs/php_codesniffer": "3.*",
         "symfony/debug-pack": "^1.0",
         "symfony/maker-bundle": "^1.0",
