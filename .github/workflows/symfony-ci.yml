@@ -50,6 +50,7 @@ jobs:
       - name: Sensiolabs Security Checker
         run:  vendor/bin/security-checker security:check
 
+      # https://github.com/chekalsky/phpcs-action (community)
       - name: PHP_CodeSniffer Check with Annotations
         uses: chekalsky/phpcs-action@v1.2.0
         with:
