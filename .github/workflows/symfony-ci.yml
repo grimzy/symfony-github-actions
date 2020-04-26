@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php-versions: ['7.2', '7.4']
+        php-versions: ['7.4']
     steps:
       # https://github.com/actions/checkout (official)
       - name: Checkout
@@ -50,6 +50,7 @@ jobs:
       - name: Sensiolabs Security Checker
         run:  vendor/bin/security-checker security:check
 
+      # https://github.com/chekalsky/phpcs-action (community)
       - name: PHP_CodeSniffer Check with Annotations
         uses: chekalsky/phpcs-action@v1.2.0
         with:
