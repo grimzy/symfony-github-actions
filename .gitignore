@@ -24,4 +24,5 @@
 
 ###> phpstan/phpstan ###
 /phpstan.neon
+/.phpstan-cache
 ###< phpstan/phpstan ###
