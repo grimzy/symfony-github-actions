@@ -58,6 +58,10 @@ jobs:
           installed_paths: '${{ github.workspace }}/vendor/squizlabs/php_codesniffer'
           phpcs_bin_path: './vendor/bin/phpcs'
 
+      # https://github.com/phpmd/phpmd
+      - name: Analyses PHP Code (PHP Mess Detector)
+        run: vendor/bin/phpmd src,tests text .phpmd-ruleset.xml
+
       # https://github.com/phpstan/phpstan
       - name: Analyse PHP Code (PHPStan)
         run: vendor/bin/phpstan analyse
@@ -69,6 +73,6 @@ jobs:
           php bin/console about
 
       # Tests
-      - name: Run functionnal and unit tests
+      - name: Run unit and functional tests
         run: |
           php bin/phpunit --stop-on-failure
