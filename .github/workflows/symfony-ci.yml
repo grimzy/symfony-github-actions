@@ -60,7 +60,7 @@ jobs:
 
       # https://github.com/OskarStark/phpstan-ga (community)
       - name: PHPStan
-          uses: OskarStark/phpstan-ga@0.12.19
+          uses: docker://oskarstark/phpstan-ga
           with:
             args: analyse src/
 
