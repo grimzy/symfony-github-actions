@@ -32,6 +32,7 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "phpmd/phpmd": "^2.8",
         "phpstan/phpstan": "^0.12.19",
         "phpstan/phpstan-symfony": "^0.12.6",
         "sensiolabs/security-checker": "^6.0",
@@ -80,6 +81,7 @@
         "phpcs": "phpcs",
         "phpcs:fix": "phpcbf",
         "phpstan": "phpstan analyse",
+        "phpmd": "phpmd src,tests text .phpmd-ruleset.xml",
         "tests": "bin/phpunit"
     },
     "conflict": {
