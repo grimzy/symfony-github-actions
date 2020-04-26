@@ -61,8 +61,10 @@ jobs:
       # https://github.com/OskarStark/phpstan-ga (community)
       - name: PHPStan
         uses: docker://oskarstark/phpstan-ga
+        env:
+          REQUIRE_DEV: true
         with:
-          args: analyse src/
+          args: analyse src/ --level=5
 
       # Symfony
       - name: Check the Symfony console
