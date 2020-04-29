@@ -12,6 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
 class Color
 {
     /**
+     * @var int
+     *
+     * @SuppressWarnings(PHPMD.ShortVariable)
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -19,6 +23,8 @@ class Color
     private $id;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="string", length=255)
      */
     private $name;
