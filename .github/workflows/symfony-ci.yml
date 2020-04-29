@@ -85,6 +85,10 @@ jobs:
           php bin/console about
 
       # Tests
+      - name: Run the migrations
+        run: |
+          php bin/console doctrine:migrations:migrate --no-interaction
+
       - name: Run unit and functional tests
         run: |
           php bin/phpunit --stop-on-failure
