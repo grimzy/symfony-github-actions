@@ -7,3 +7,5 @@ parameters:
     tmpDir: .phpstan-cache
     paths:
         - src
+    autoload_directories:
+        - src/Migrations

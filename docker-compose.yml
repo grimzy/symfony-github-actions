@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  database:
+    image: mysql:latest
+    container_name: mysql-symfony-github-actions
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./.mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: symfony_github_actions
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_password
